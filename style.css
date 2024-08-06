@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: lightskyblue;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+#face-picture {
+    display: none; /* Hide the main page headshot */
+}
+
+.face {
+    width: 217%; /* Adjust size to match the main page headshot */
+    max-width: 600px;
+}
+
+/* Resume and Contact Info Section */
+.resume-preview {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.resume-preview .resume-thumbnail {
+    width: 40%;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+contact-info a:hover {
+    color: red;
+}
+
+/*----------about--------------------*/
+#about {
+    padding: 80px 0;
+    background-color: black;
+    color: aliceblue;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 30%;
+}
+
+.about-col-1 img {
+    width: 217%; /* Adjust size to match the main page headshot */
+    max-width: 600px;
+    border-radius: 15%;
+}
+
+.about-col-2 {
+    flex-basis: 50%;
+}
+
+.about-col-2 h1 {
+    font-size: 30px;
+}
+
+.about-col-2 p {
+    font-size: 18px;
+}
+
+.sub-title {
+    font-size: 50px; /* Reduced size */
+    font-weight: 600;
+    color: lightblue;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: lightskyblue;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: width 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 100%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.tab-contents ul li span {
+    color: lightseagreen;
+    font-size: 16px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+.tab-links.active-link {
+    font-weight: bold;
+}
+
+
+/*----------projects--------------------*/
+#projects {
+    padding: 30px 0;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.projects-list div {
+    background: darkslategray;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.projects-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.projects-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.projects-list div a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.projects-list div:hover {
+    background-color: red;
+    transform: translateY(-10px);
+}
+
+/*----------other--------------------*/
+#other {
+    padding: 50px 0;
+}
+
+.V3NOM Audio & Entertainment {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.Services {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    text-align: center; /* Center the content */
+}
+
+.Services img {
+    width: 50%; /* Adjusted size */
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto; /* Center the image */
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 17px;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: red;
+    text-decoration: none;
+    font-size: 25px;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.Services:hover img {
+    transform: scale(1.2);
+}
+
+.Services:hover .layer {
+    height: 100%;
+}
+
+.btn {
+    display: none; /* Hide the 'See More' button */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #header {
+        height: auto;
+    }
+
+    #logo-nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .face, .resume-preview .resume-thumbnail {
+        width: 80%;
+        margin: 0 auto; /* Center the image */
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .sub-title, .about-col-2 h1, .about-col-2 p, .tab-titles {
+        text-align: center;
+        width: 100%;
+    }
+
+    .tab-links {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .projects-list {
+        grid-template-columns: 1fr;
+    }
+
+    .V3NOM Audio & Entertainment {
+        grid-template-columns: 1fr;
+    }
+}
+/*--------contact---------*/
+.contact-left{
+    flex-basis: 35%;
+
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 5%;
+    
+}
+.contact-left p i{
+    color: lightblue;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: white;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+   color: lightblue;
+   transform: translateY(-5px);
+}
+.btn {
+    display: inline-block;
+    background: #ff004f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s, transform 0.3s;
+}
+
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+}
